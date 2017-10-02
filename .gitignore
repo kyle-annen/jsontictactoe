@@ -1,0 +1,5 @@
+.idea/
+project/
+src/web/.idea
+src/web/node_modules
+target/

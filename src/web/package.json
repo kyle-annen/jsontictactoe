@@ -1,0 +1,22 @@
+{
+  "name": "tictactoe_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tictactoe.js",
+  "scripts": {
+    "scripts": {
+      "test": "./node_modules/mocha/bin/_mocha"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
+    "mocha": "^3.5.3",
+    "sinon": "^4.0.0",
+    "sinon-chai": "^2.14.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
