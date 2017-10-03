@@ -1,9 +1,18 @@
 var expect = require('./chai').expect;
-var TicTacToe = require('../../main/assets/tictactoe');
+var TicTacToe = require('./tictactoe');
 
+describe('[JavaScript] TicTacToe', function() {
+    describe('parseResponse', function() {
+        it('parses a json to a js object', function() {
+            var testJson = "{ \"board\":\"1,2,3,4,5,6,7,8,9\",\"messages\":\"This is a test message\"}";
+            var testBoard = "1,2,3,4,5,6,7,8,9";
+            var tictactoe = new TicTacToe(testBoard);
+            var parsedJson = tictactoe.parseResponse(testJson);
+            expect(parsedJson.board).to.deep.equal(testBoard);
+        });
+    });
 
-describe('tictactoe', function() {
-    describe('updateBoardState', function(){
+    describe('updateBoardState', function() {
         it('updates the board state', function() {
             var boardState = "1,2,3,4,5,6,7,8,9";
             var tictactoe = new TicTacToe(boardState);
@@ -24,20 +33,5 @@ describe('tictactoe', function() {
         it('generates a JSON for the request with a move value', function() {
             expect(jsonResponse.move).to.equal("1");
         });
-        console.log(jsonResponse);
-    });
-
-    describe('getJsonResponse', function() {
-        it('sends a JSON request and receives a JSON response', function() {
-            var boardState = "1,2,3,4,5,6,7,8,9";
-            var move = "1";
-            var ticTacToe = new TicTacToe(boardState);
-            var jsonResult = ticTacToe.getJsonResponse(move);
-            console.log(jsonResult);
-            expect(jsonResult.board[0]).to.equal("X");
-        });
     });
 });
-
-
-

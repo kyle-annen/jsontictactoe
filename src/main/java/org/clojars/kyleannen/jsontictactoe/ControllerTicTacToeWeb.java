@@ -22,7 +22,6 @@ public class ControllerTicTacToeWeb implements ControllerInterface{
   }
 
   private String getIndexPage() throws IOException {
-    String indexPage = System.getProperty("user.dir") + "/src/main/assets/index.html";
-    return indexPage;
+    return System.getProperty("user.dir") + "/src/main/assets/index.html";
   }
 }

@@ -17,7 +17,6 @@ TicTacToe.prototype.renderGame = function(responseJson)  {
     this.updateBoardState(responseJson.board);
     var board = responseJson.board.split(",");
     for (var j = 0; j < board.length; j++) {
-
         var cellIdName = "cell-" + (j + 1).toString();
         var cellRef = document.getElementById(cellIdName);
         cellRef.innerHTML = board[j];
@@ -43,7 +42,6 @@ TicTacToe.prototype.getJsonResponse = function(move) {
     xhr.onload = function () {
         var response = xhr.responseText;
         var responseJson = JSON.parse(response);
-
         if (xhr.readyState === 4 && xhr.status === 200) {
             tictactoe.renderGame(responseJson);
         }

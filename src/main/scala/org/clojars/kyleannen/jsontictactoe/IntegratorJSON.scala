@@ -6,7 +6,6 @@ import org.clojars.kyleannen.tictactoe.{GameState, TicTacToeAPI, Board}
 object IntegratorJSON {
 
   def submitRound(json: String): String = {
-    println(json)
     val jsonArray = json.substring(2, json.length-1).split(": |:|\",\"|\"").filter(_.nonEmpty)
     val jsonMap: Map[String, String] = Map(jsonArray(0) -> jsonArray(1), jsonArray(2) -> jsonArray(3))
     val receivedBoard: List[String] = jsonMap("board").split(",").toList
