@@ -1,5 +1,5 @@
 .idea/
 project/
 src/web/.idea
-src/web/node_modules
+src/test/assets/node_modules/
 target/

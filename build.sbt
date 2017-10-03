@@ -6,10 +6,14 @@ scalaVersion := "2.12.3"
 
 resolvers += "Clojars" at "https://clojars.org/repo"
 
+//disable cross path file naming (simplify deploy process)
 crossPaths := false
-
+//set the options for JUnit to display JUnit test logging on success (otherwise it is suppressed)
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-v")
-
+//enable the js test plugin
+lazy val root = (project in file(".")).enablePlugins(SbtWeb)
+//add pattern for js tests
+WebKeys.jsFilter in TestAssets := GlobFilter("tictactoe.spec.js")
 
 libraryDependencies ++= Seq(
   "org.scalactic" %% "scalactic" % "3.0.1",

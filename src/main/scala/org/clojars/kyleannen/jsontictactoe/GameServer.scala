@@ -9,7 +9,7 @@ object GameServer {
     router.addRoute("POST", "/", new ControllerTicTacToeJSON)
     router.disableDirectoryRouting()
     val baseDirectory: String = System.getProperty("user.dir")
-    val webDirectory: String = baseDirectory + "/src/web/"
+    val webDirectory: String = baseDirectory + "/src/main/assets"
     val args: Array[String] = Array("-p", "3434", "-d", webDirectory)
     val gameServer = new ConfigureServer().configure(args, router)
     println("Play TicTacToe at http://localhost:3434/")
