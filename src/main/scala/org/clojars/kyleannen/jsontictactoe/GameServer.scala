@@ -1,5 +1,6 @@
 package org.clojars.kyleannen.jsontictactoe
 
+import util.Properties
 import org.clojars.kyleannen.javaserver.{ConfigureServer, Router}
 
 object GameServer {
@@ -10,9 +11,9 @@ object GameServer {
     router.disableDirectoryRouting()
     val baseDirectory: String = System.getProperty("user.dir")
     val webDirectory: String = baseDirectory + "/src/main/assets"
-    val args: Array[String] = Array("-p", "3434", "-d", webDirectory)
+    val port = Properties.envOrElse("PORT", "3434")
+    val args: Array[String] = Array("-p", port, "-d", webDirectory)
     val gameServer = new ConfigureServer().configure(args, router)
-    println("Play TicTacToe at http://localhost:3434/")
     gameServer.run()
   }
 

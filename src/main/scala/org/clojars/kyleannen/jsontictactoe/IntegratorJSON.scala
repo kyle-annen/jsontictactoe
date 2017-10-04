@@ -38,15 +38,11 @@ object IntegratorJSON {
 
   def buildResponseJson(board: List[String], messages: List[String]): String = {
     val boardString = board.mkString(",")
-
     val gameRestartHTML = "<a href='/'>Restart Game</a>"
-
     val messagesString = messages.map(x => "\"" + x + "\"").mkString(", ")
     val messagesStringWithRestart = addRestartGameCodeIfNeeded(messagesString, gameRestartHTML)
 
     "{ \"board\": \"" + boardString + "\", \"messages\": [" + messagesStringWithRestart + "]}"
-
-
   }
 
   def addRestartGameCodeIfNeeded(htmlString: String, gameRestartHtml: String): String = {
