@@ -15,14 +15,23 @@ TicTacToe.prototype.updateBoardState = function(board) {
 
 TicTacToe.prototype.renderGame = function(responseJson)  {
     this.updateBoardState(responseJson.board);
-    var board = responseJson.board.split(",");
+    var boardArray =responseJson.board.split(",");
+    this.renderBoard(boardArray);
+    this.renderMessages(responseJson.messages);
+};
+
+TicTacToe.prototype.renderMessages = function(messages) {
+    var messagesReference = document.getElementById("messages");
+    messagesReference.innerHTML = messages.join("<br/><br/>");
+};
+
+
+TicTacToe.prototype.renderBoard = function(board) {
     for (var j = 0; j < board.length; j++) {
         var cellIdName = "cell-" + (j + 1).toString();
         var cellRef = document.getElementById(cellIdName);
         cellRef.innerHTML = board[j];
     }
-    var messagesReference = document.getElementById("messages");
-    messagesReference.innerHTML = responseJson.messages.join("<br/><br/>");
 };
 
 TicTacToe.prototype.generateJSON = function(move) {
@@ -36,17 +45,17 @@ TicTacToe.prototype.getJsonResponse = function(move) {
     var url = "http://localhost:3434/";
     var requestJson = this.generateJSON(move);
     var requestJsonString = JSON.stringify(requestJson);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
-    xhr.onload = function () {
-        var response = xhr.responseText;
+    var xmlRequest = new XMLHttpRequest();
+    xmlRequest.open("POST", url, true);
+    xmlRequest.setRequestHeader('Content-type','application/json; charset=utf-8');
+    xmlRequest.onload = function () {
+        var response = xmlRequest.responseText;
         var responseJson = JSON.parse(response);
-        if (xhr.readyState === 4 && xhr.status === 200) {
+        if (xmlRequest.readyState === 4 && xmlRequest.status === 200) {
             tictactoe.renderGame(responseJson);
         }
     };
-    xhr.send(requestJsonString);
+    xmlRequest.send(requestJsonString);
 };
 
 TicTacToe.prototype.onCellClick = function(e) {
@@ -55,7 +64,7 @@ TicTacToe.prototype.onCellClick = function(e) {
     this.getJsonResponse(move);
 };
 
-TicTacToe.prototype.start = function(documentObject) {
+TicTacToe.prototype.initializeClickListeners = function(documentObject) {
     documentObject.addEventListener("DOMContentLoaded", function () {
         var cells = documentObject.getElementsByClassName("cell");
         for (var i = 0; i < cells.length; i++) {

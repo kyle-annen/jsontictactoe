@@ -27,9 +27,11 @@ describe('[JavaScript] TicTacToe', function() {
         var move = "1";
         var sut = new TicTacToe(board);
         var jsonResponse = sut.generateJSON(move);
+
         it('generates a JSON for the request with a board value', function() {
             expect(jsonResponse.board).to.equal(board);
         });
+
         it('generates a JSON for the request with a move value', function() {
             expect(jsonResponse.move).to.equal("1");
         });
