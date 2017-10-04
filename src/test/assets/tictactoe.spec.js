@@ -1,4 +1,5 @@
-var expect = require('./chai').expect;
+var expect = require('chai').expect;
+
 var TicTacToe = require('./tictactoe');
 
 describe('[JavaScript] TicTacToe', function() {

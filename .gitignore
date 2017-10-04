@@ -3,3 +3,6 @@ project/
 src/web/.idea
 src/test/assets/node_modules/
 target/
+package-lock.json
+/node_modules/
+
