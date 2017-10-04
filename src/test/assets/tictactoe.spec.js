@@ -76,14 +76,140 @@ describe('[JavaScript] TicTacToe', function() {
 
         });
 
-        it('renders the messages based on the server response json');
+        it('renders the messages based on the server response json', function() {
+            var jsdom = require('jsdom/lib/old-api.js');
 
-        it('board does not contain previous versions of the board values');
+            jsdom.env(htmlFileContent, function(err, window) {
+                var tictactoe = new TicTacToe(window.document);
+                var testBoard = "X,2,3,4,5,6,7,8,9";
+                var testMessage = "Test message";
+                var testJson = {};
+                testJson.board = testBoard;
+                testJson.messages = [testMessage];
+
+                tictactoe.renderGame(testJson);
+
+                var actual = window.document.getElementById("messages").innerHTML;
+
+                expect(actual).to.equal(testMessage);
+
+                window.close();
+            });
+
+        });
+
+        it('board does not contain previous versions of the board values', function() {
+            var jsdom = require('jsdom/lib/old-api.js');
+
+            jsdom.env(htmlFileContent, function(err, window) {
+                var tictactoe = new TicTacToe(window.document);
+                var testBoard = "X,2,3,4,5,6,7,8,9";
+                var testMessage = "Test message";
+                var testJson = {};
+                testJson.board = testBoard;
+                testJson.messages = [testMessage];
+
+                tictactoe.renderGame(testJson);
+
+                var actual = window.document.getElementById("cell-1").innerHTML;
+
+                expect(actual).to.not.equal("1");
+
+                window.close();
+            });
+        });
     });
 
     describe('renderMessages', function() {
-        it('renders messages provided');
-        it('removes previous messages when rendering new messages');
+        it('renders messages provided', function() {
+            var jsdom = require('jsdom/lib/old-api.js');
+
+            jsdom.env(htmlFileContent, function(err, window) {
+                var tictactoe = new TicTacToe(window.document);
+                var testMessages = ["Test message"];
+
+                tictactoe.renderMessages(testMessages);
+
+                var actual = window.document.getElementById("messages").innerHTML;
+
+                expect(actual).to.not.equal(testMessages);
+
+                window.close();
+            });
+        });
+
+        it('removes previous messages when rendering new messages', function() {
+            var jsdom = require('jsdom/lib/old-api.js');
+
+            jsdom.env(htmlFileContent, function(err, window) {
+                var tictactoe = new TicTacToe(window.document);
+                var testMessages = ["Test message"];
+
+                tictactoe.renderMessages(testMessages);
+
+                var actual = window.document.getElementById("messages").innerHTML;
+
+                expect(actual).to.equal(testMessages[0]);
+
+                window.close();
+            });
+        });
+    });
+
+    describe('initializeClickListeners', function() {
+      it('returns the json to send to server with the move and current board populated', function() {
+          var jsdom = require('jsdom/lib/old-api.js');
+
+          jsdom.env(htmlFileContent, function(err, window) {
+              var tictactoe = new TicTacToe(window.document);
+              var clickedValues = [];
+
+              tictactoe.onCellClick = function(e) {
+                  clickedValues.push(e.target.id);
+              };
+
+              tictactoe.initializeClickListeners(window.document);
+
+              for(var i = 1; i < 10; i++) {
+                  var cellId = "cell-" + i.toString();
+                  window.document.getElementById(cellId).click();
+              }
+
+              expect(clickedValues.includes("cell-1"));
+              expect(clickedValues.includes("cell-2"));
+              expect(clickedValues.includes("cell-3"));
+              expect(clickedValues.includes("cell-4"));
+              expect(clickedValues.includes("cell-5"));
+              expect(clickedValues.includes("cell-6"));
+              expect(clickedValues.includes("cell-7"));
+              expect(clickedValues.includes("cell-8"));
+              expect(clickedValues.includes("cell-9"));
+
+              window.close();
+          });
+      });
+    });
+
+    describe('onCellClick', function() {
+        it('gets the id of the item clicked, and calls getJsonResponse', function() {
+            var jsdom = require('jsdom/lib/old-api.js');
+
+            jsdom.env(htmlFileContent, function(err, window) {
+                var tictactoe = new TicTacToe(window.document);
+
+                var valueReturned;
+
+                tictactoe.getJsonResponse = function(move) {
+                    expect(move).to.equal("1");
+                };
+
+                tictactoe.initializeClickListeners(window.document);
+
+                window.document.getElementById("cell-1").click();
+
+                window.close();
+            });
+        });
     });
 
     describe('generateJSON', function() {
@@ -100,6 +226,8 @@ describe('[JavaScript] TicTacToe', function() {
             expect(jsonResponse.move).to.equal("1");
         });
     });
+
+
 
 
 });

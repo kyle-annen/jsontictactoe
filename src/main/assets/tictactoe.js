@@ -42,7 +42,7 @@ TicTacToe.prototype.generateJSON = function(move) {
 };
 
 TicTacToe.prototype.getJsonResponse = function(move) {
-    var url = "http://localhost:3434/";
+    var url = this.documentObject.URL;
     var requestJson = this.generateJSON(move);
     var requestJsonString = JSON.stringify(requestJson);
     var xmlRequest = new XMLHttpRequest();
