@@ -1,4 +1,4 @@
-# JSON TicTacToe [![Build Status](https://travis-ci.org/kyle-annen/jsontictactoe.svg?branch=master)](https://travis-ci.org/kyle-annen/jsontictactoe)a
+# JSON TicTacToe [![Build Status](https://travis-ci.org/kyle-annen/jsontictactoe.svg?branch=master)](https://travis-ci.org/kyle-annen/jsontictactoe)
 
 A JavaScript TicTacToe game client and server.  The server is ran from a compiled Jar, and the client is served to a browser pointed at the root of the webserver addresss.
 
