@@ -2,7 +2,7 @@ package org.clojars.kyleannen.jsontictactoe
 
 import org.scalatest.FunSpec
 
-class IntegratorJSONSpec extends FunSpec{
+class ScalaIntegratorJSONSpec extends FunSpec{
 
   describe("parseJson") {
     it("returns a map corresponding to the JSON given") {
@@ -38,7 +38,7 @@ class IntegratorJSONSpec extends FunSpec{
       val testBoard: List[String] = (1 to 9).toList.map(x=>x.toString)
       val testMove: String = "10"
       val resultGameState = IntegratorJSON.generateGameState(testBoard, testMove)
-      assert(resultGameState.validSubmission == false)
+      assert(!resultGameState.validSubmission)
 
     }
   }

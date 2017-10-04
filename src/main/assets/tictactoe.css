@@ -32,8 +32,9 @@
     border-right: none;
 }
 
-.messages {
+#messages {
     text-align: center;
+    font-size: 40px;
     width: 100%;
 }
 
@@ -43,4 +44,8 @@ h1 {
 
 body {
     min-width: 779px;
+}
+
+.row {
+    text-align: center;
 }

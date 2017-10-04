@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ControllerTicTacToeJSONTest {
+public class JavaControllerTicTacToeJSONTest {
 
   @Test
   public void responseParamsContainsUpdatedBoardState() throws IOException {

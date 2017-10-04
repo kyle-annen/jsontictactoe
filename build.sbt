@@ -1,4 +1,4 @@
-name := "webtictactoe"
+name := "jsontictactoe"
 
 version := "0.1"
 
