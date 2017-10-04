@@ -1,7 +1,7 @@
 'use strict';
 
-function TicTacToe(board, documentObject) {
-    this.boardState = board;
+function TicTacToe(documentObject) {
+    this.boardState = "1,2,3,4,5,6,7,8,9";
     this.documentObject = documentObject;
 }
 
@@ -15,13 +15,13 @@ TicTacToe.prototype.updateBoardState = function(board) {
 
 TicTacToe.prototype.renderGame = function(responseJson)  {
     this.updateBoardState(responseJson.board);
-    var boardArray =responseJson.board.split(",");
+    var boardArray = responseJson.board.split(",");
     this.renderBoard(boardArray);
     this.renderMessages(responseJson.messages);
 };
 
 TicTacToe.prototype.renderMessages = function(messages) {
-    var messagesReference = document.getElementById("messages");
+    var messagesReference = this.documentObject.getElementById("messages");
     messagesReference.innerHTML = messages.join("<br/><br/>");
 };
 
@@ -29,7 +29,7 @@ TicTacToe.prototype.renderMessages = function(messages) {
 TicTacToe.prototype.renderBoard = function(board) {
     for (var j = 0; j < board.length; j++) {
         var cellIdName = "cell-" + (j + 1).toString();
-        var cellRef = document.getElementById(cellIdName);
+        var cellRef = this.documentObject.getElementById(cellIdName);
         cellRef.innerHTML = board[j];
     }
 };
@@ -77,6 +77,7 @@ TicTacToe.prototype.initializeClickListeners = function(documentObject) {
     });
 };
 
+//sets the exports based on environment
 if( typeof exports !== 'undefined' ) {
     if( typeof module !== 'undefined' && module.exports ) {
         exports = module.exports = TicTacToe;
