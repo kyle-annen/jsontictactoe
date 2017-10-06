@@ -13,13 +13,13 @@ public class ControllerTicTacToeJSON implements ControllerInterface{
     String responseJSON = IntegratorJSON.submitRound(requestParameters.bodyContent);
 
     return new ResponseParameters.ResponseBuilder(200)
+            .setDate()
             .setContentType(".json")
             .setContentLength(responseJSON)
-            .setBodyType(responseJSON)
-            .setContentLength(responseJSON)
-            .setDate()
             .setContentDisposition(".html")
+            .setBodyType(responseJSON)
             .setBodyContent(responseJSON)
+            .setAccessControlAllowOrigin(requestParameters.host)
             .build();
   }
 }
