@@ -5,7 +5,7 @@
     <artifactId>jsontictactoe</artifactId>
     <packaging>jar</packaging>
     <description>jsontictactoe</description>
-    <version>0.1</version>
+    <version>0.2</version>
     <name>jsontictactoe</name>
     <organization>
         <name>jsontictactoe</name>

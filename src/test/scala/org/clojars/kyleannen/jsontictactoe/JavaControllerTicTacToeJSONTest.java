@@ -25,5 +25,6 @@ public class JavaControllerTicTacToeJSONTest {
                     .build();
     ResponseParameters responseParameters =  new ControllerTicTacToeJSON().getResponse(requestParameters);
     assert(responseParameters.getBodyContent().contains("X,2,3"));
+    assert(responseParameters.getAccessControlAllowOrigin().contains("Access-Control-Allow-Origin:"));
   }
 }
