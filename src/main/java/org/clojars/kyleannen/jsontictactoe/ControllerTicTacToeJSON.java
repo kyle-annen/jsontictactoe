@@ -19,7 +19,7 @@ public class ControllerTicTacToeJSON implements ControllerInterface{
             .setContentDisposition(".html")
             .setBodyType(responseJSON)
             .setBodyContent(responseJSON)
-            .setAccessControlAllowOrigin(requestParameters.host)
+            .setAccessControlAllowOrigin()
             .build();
   }
 }
