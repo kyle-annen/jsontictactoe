@@ -15,12 +15,14 @@ public class JavaControllerTicTacToeJSONTest {
   public void responseParamsContainsUpdatedBoardState() throws IOException {
     ArrayList<String> httpMessage = new ArrayList<>();
     httpMessage.add("PUT / HTTP/1.1\r\n\r\n");
+    httpMessage.add("Host: api.test.org\r\n");
     httpMessage.add("Body-Content: { \"board\": \"1,2,3,4,5,6,7,8,9\",\"move\":\"1\"}\r\n\r\n");
     RequestParameters requestParameters =
             new RequestParameters
                     .RequestBuilder("/")
                     .setHttpVerb(httpMessage)
                     .setRequestPath(httpMessage)
+                    .setHost(httpMessage)
                     .setBodyContent(httpMessage)
                     .build();
     ResponseParameters responseParameters =  new ControllerTicTacToeJSON().getResponse(requestParameters);
