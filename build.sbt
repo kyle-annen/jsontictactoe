@@ -2,7 +2,7 @@
 organization := "org.clojars.kyleannen"
 name := "jsontictactoe"
 
-version := "0.1"
+version := "0.3"
 
 scalaVersion := "2.12.3"
 
@@ -28,7 +28,7 @@ credentials += Credentials("clojars", "clojars.org", "kyleannen", "spacerace2021
 //set heroku deploy config
 herokuFatJar in Compile := Some((assemblyOutputPath in assembly).value)
 herokuJdkVersion in Compile := "1.8"
-herokuAppName in Compile := "protected-anchorage-62016"
+herokuAppName in Compile := "mysterious-badlands-66536"
 herokuIncludePaths in Compile := Seq(
   "src/main/assets/"
 )
