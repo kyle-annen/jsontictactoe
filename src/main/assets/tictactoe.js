@@ -21,8 +21,9 @@ TicTacToe.prototype.renderGame = function(responseJson)  {
 };
 
 TicTacToe.prototype.renderMessages = function(messages) {
+    if (messages.includes("Game Over")) { messages.push("<a href='/'>Restart Game</a>")}
     var messagesReference = this.documentObject.getElementById("messages");
-    messagesReference.innerHTML = messages.join("<br/><br/>");
+    messagesReference.innerHTML = messages.join("<br/>");
 };
 
 
@@ -41,16 +42,13 @@ TicTacToe.prototype.generateJSON = function(move) {
     return json;
 };
 
-
-
-
 TicTacToe.prototype.getJsonResponse = function(move) {
-    var url = this.documentObject.URL;
+    var url = "http://protected-anchorage-62016.herokuapp.com/";
     var requestJson = this.generateJSON(move);
     var requestJsonString = JSON.stringify(requestJson);
     var xmlRequest = new XMLHttpRequest();
     xmlRequest.open("POST", url, true);
-    xmlRequest.setRequestHeader('Content-type','application/json; charset=utf-8');
+    xmlRequest.setRequestHeader('Content-type','text/plain');
     xmlRequest.onload = function () {
         var response = xmlRequest.responseText;
         var responseJson = JSON.parse(response);

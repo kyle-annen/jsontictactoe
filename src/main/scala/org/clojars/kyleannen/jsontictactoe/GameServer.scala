@@ -7,7 +7,6 @@ object GameServer {
   def start(): Unit = {
     val router = new Router()
     router.addRoute("GET","/", new ControllerTicTacToeWeb)
-    router.addRoute("POST", "/", new ControllerTicTacToeJSON)
     router.disableDirectoryRouting()
     val baseDirectory: String = System.getProperty("user.dir")
     val webDirectory: String = baseDirectory + "/src/main/assets"
