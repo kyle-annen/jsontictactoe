@@ -1,4 +1,7 @@
-# JSON TicTacToe [![Build Status](https://travis-ci.org/kyle-annen/jsontictactoe.svg?branch=master)](https://travis-ci.org/kyle-annen/jsontictactoe)
+# JSON TicTacToe 
+[![Build Status](https://travis-ci.org/kyle-annen/jsontictactoe.svg?branch=master)](https://travis-ci.org/kyle-annen/jsontictactoe)
+[![Coverage Status](https://coveralls.io/repos/github/kyle-annen/jsontictactoe/badge.svg?branch=codacy)](https://coveralls.io/github/kyle-annen/jsontictactoe?branch=codacy)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/45e22d39b070466094762b4bdfa75e64)](https://www.codacy.com/app/kyle-annen/jsontictactoe?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kyle-annen/jsontictactoe&amp;utm_campaign=Badge_Grade)
 
 A JavaScript TicTacToe game client and server.  The server is ran from a compiled Jar, and the client is served to a browser pointed at the root of the webserver addresss.
 
