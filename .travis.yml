@@ -3,3 +3,7 @@ scala:
   - 2.11.2
 install:
   - npm install
+script:
+  - sbt clean coverage test coverageReport
+after_success:
+  - sbt coveralls
