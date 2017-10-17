@@ -49,7 +49,6 @@ TicTacToe.prototype.getJsonResponse = function(move) {
     var xmlRequest = new XMLHttpRequest();
     xmlRequest.open("POST", url, true);
     xmlRequest.setRequestHeader('Content-type','text/plain');
-    xmlRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
     xmlRequest.onload = function () {
         var response = xmlRequest.responseText;
         var responseJson = JSON.parse(response);
