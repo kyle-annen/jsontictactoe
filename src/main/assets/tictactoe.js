@@ -43,7 +43,7 @@ TicTacToe.prototype.generateJSON = function(move) {
 };
 
 TicTacToe.prototype.getJsonResponse = function(move) {
-    var url = "http://protected-anchorage-62016.herokuapp.com/";
+    var url = "https://protected-anchorage-62016.herokuapp.com/";
     var requestJson = this.generateJSON(move);
     var requestJsonString = JSON.stringify(requestJson);
     var xmlRequest = new XMLHttpRequest();
