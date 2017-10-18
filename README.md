@@ -37,8 +37,28 @@ Install dependencies:
 npm install
 ```
 
-Run tests:
+### Run tests:
+
+All tests are run through `sbt`.
 
 ```
 sbt test
 ```
+
+### Coverage:
+
+Coverage has been automated through a shell script. From the root directory call:
+
+```
+sh testcoverage.sh
+```
+
+# Deployment
+
+Deployment is automated as well, though login through Heroku Cli and Clojars authentication is needed.
+
+```
+sh deploy.sh
+```
+
+
