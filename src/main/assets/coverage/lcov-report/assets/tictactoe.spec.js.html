@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for assets/tictactoe.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">assets/</a> tictactoe.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.92% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/122</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.92% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/122</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var expect = require('chai').expect;
+var describe = require('mocha').describe;
+var it = require('mocha').it;
+var TicTacToe = require('./tictactoe');
+&nbsp;
+var htmlFileContent = '&lt;!DOCTYPE html&gt;\n' +
+    '&lt;html&gt;\n' +
+    '&lt;head&gt;\n' +
+    '    &lt;meta charset="UTF-8"&gt;\n' +
+    '    &lt;title&gt;JSON Javascript TicTacToe&lt;/title&gt;\n' +
+    '&lt;/head&gt;\n' +
+    '&lt;body&gt;\n' +
+    '&lt;div class="container"&gt;\n' +
+    '    &lt;div class="row"&gt;\n' +
+    '        &lt;div id="cell-1" class="cell col-md-4 top-row left-row"&gt;1&lt;/div&gt;\n' +
+    '        &lt;div id="cell-2" class="cell col-md-4 top-row"&gt;2&lt;/div&gt;\n' +
+    '        &lt;div id="cell-3" class="cell col-md-4 top-row right-row"&gt;3&lt;/div&gt;\n' +
+    '    &lt;/div&gt;\n' +
+    '    &lt;div class="row"&gt;\n' +
+    '        &lt;div id="cell-4" class="cell col-md-4 left-row"&gt;4&lt;/div&gt;\n' +
+    '        &lt;div id="cell-5" class="cell col-md-4"&gt;5&lt;/div&gt;\n' +
+    '        &lt;div id="cell-6" class="cell col-md-4 right-row"&gt;6&lt;/div&gt;\n' +
+    '    &lt;/div&gt;\n' +
+    '    &lt;div class="row"&gt;\n' +
+    '        &lt;div id="cell-7" class="cell col-md-4 bottom-row left-row"&gt;7&lt;/div&gt;\n' +
+    '        &lt;div id="cell-8" class="cell col-md-4 bottom-row"&gt;8&lt;/div&gt;\n' +
+    '        &lt;div id="cell-9" class="cell col-md-4 bottom-row right-row"&gt;9&lt;/div&gt;\n' +
+    '    &lt;/div&gt;\n' +
+    '    &lt;div class="row"&gt;&lt;br/&gt;\n' +
+    '        &lt;h1 id="messages"&gt;Let\'s play Tic Tac Toe!&lt;br/&gt;&lt;br/&gt;Click on an open space to place token.&lt;/h1&gt;\n' +
+    '    &lt;/div&gt;\n' +
+    '&lt;/div&gt;\n' +
+    '&lt;/body&gt;\n' +
+    '&lt;/html&gt;';
+&nbsp;
+describe('[JavaScript] TicTacToe', <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    describe('parseResponse', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        it('parses a json to a js object', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var testJson = "{ \"board\":\"1,2,3,4,5,6,7,8,9\",\"messages\":\"This is a test message\"}";</span>
+<span class="cstat-no" title="statement not covered" >            var testBoard = "1,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >            var tictactoe = new TicTacToe(testBoard);</span>
+<span class="cstat-no" title="statement not covered" >            var parsedJson = tictactoe.parseResponse(testJson);</span>
+<span class="cstat-no" title="statement not covered" >            expect(parsedJson.board).to.deep.equal(testBoard);</span>
+        });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    describe('updateBoardState', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        it('updates the board state', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var boardState = "1,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >            var tictactoe = new TicTacToe(boardState);</span>
+<span class="cstat-no" title="statement not covered" >            var testState = "X,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >            tictactoe.updateBoardState(testState);</span>
+<span class="cstat-no" title="statement not covered" >            expect(tictactoe.boardState).to.deep.equal(testState);</span>
+        });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    describe('renderGame', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        it('renders the board based on the server response json', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var jsdom = require('jsdom/lib/old-api.js');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            jsdom.env(htmlFileContent, <span class="fstat-no" title="function not covered" >function(err, window) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var tictactoe = new TicTacToe(window.document);</span>
+<span class="cstat-no" title="statement not covered" >                var testBoard = "X,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >                var testMessage = "Test message";</span>
+<span class="cstat-no" title="statement not covered" >                var testJson = {};</span>
+<span class="cstat-no" title="statement not covered" >                testJson.board = testBoard;</span>
+<span class="cstat-no" title="statement not covered" >                testJson.messages = [testMessage];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                tictactoe.renderGame(testJson);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var actual = window.document.getElementById("cell-1").innerHTML;</span>
+<span class="cstat-no" title="statement not covered" >                var expected = "X";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                expect(actual).to.equal(expected);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                window.close();</span>
+            });
+&nbsp;
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        it('renders the messages based on the server response json', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var jsdom = require('jsdom/lib/old-api.js');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            jsdom.env(htmlFileContent, <span class="fstat-no" title="function not covered" >function(err, window) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var tictactoe = new TicTacToe(window.document);</span>
+<span class="cstat-no" title="statement not covered" >                var testBoard = "X,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >                var testMessage = "Test message";</span>
+<span class="cstat-no" title="statement not covered" >                var testJson = {};</span>
+<span class="cstat-no" title="statement not covered" >                testJson.board = testBoard;</span>
+<span class="cstat-no" title="statement not covered" >                testJson.messages = [testMessage];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                tictactoe.renderGame(testJson);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var actual = window.document.getElementById("messages").innerHTML;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                expect(actual).to.equal(testMessage);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                window.close();</span>
+            });
+&nbsp;
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        it('board does not contain previous versions of the board values', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var jsdom = require('jsdom/lib/old-api.js');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            jsdom.env(htmlFileContent, <span class="fstat-no" title="function not covered" >function(err, window) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var tictactoe = new TicTacToe(window.document);</span>
+<span class="cstat-no" title="statement not covered" >                var testBoard = "X,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >                var testMessage = "Test message";</span>
+<span class="cstat-no" title="statement not covered" >                var testJson = {};</span>
+<span class="cstat-no" title="statement not covered" >                testJson.board = testBoard;</span>
+<span class="cstat-no" title="statement not covered" >                testJson.messages = [testMessage];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                tictactoe.renderGame(testJson);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var actual = window.document.getElementById("cell-1").innerHTML;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                expect(actual).to.not.equal("1");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                window.close();</span>
+            });
+        });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    describe('renderMessages', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        it('renders messages provided', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var jsdom = require('jsdom/lib/old-api.js');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            jsdom.env(htmlFileContent, <span class="fstat-no" title="function not covered" >function(err, window) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var tictactoe = new TicTacToe(window.document);</span>
+<span class="cstat-no" title="statement not covered" >                var testMessages = ["Test message"];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                tictactoe.renderMessages(testMessages);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var actual = window.document.getElementById("messages").innerHTML;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                expect(actual).to.not.equal(testMessages);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                window.close();</span>
+            });
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        it('removes previous messages when rendering new messages', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var jsdom = require('jsdom/lib/old-api.js');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            jsdom.env(htmlFileContent, <span class="fstat-no" title="function not covered" >function(err, window) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var tictactoe = new TicTacToe(window.document);</span>
+<span class="cstat-no" title="statement not covered" >                var testMessages = ["Test message"];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                tictactoe.renderMessages(testMessages);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var actual = window.document.getElementById("messages").innerHTML;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                expect(actual).to.equal(testMessages[0]);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                window.close();</span>
+            });
+        });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    describe('initializeClickListeners', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      it('returns the json to send to server with the move and current board populated', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >          var jsdom = require('jsdom/lib/old-api.js');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          jsdom.env(htmlFileContent, <span class="fstat-no" title="function not covered" >function(err, window) {</span></span>
+<span class="cstat-no" title="statement not covered" >              var tictactoe = new TicTacToe(window.document);</span>
+<span class="cstat-no" title="statement not covered" >              var clickedValues = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              tictactoe.onCellClick = <span class="fstat-no" title="function not covered" >function(e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                  clickedValues.push(e.target.id);</span>
+              };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              tictactoe.initializeClickListeners(window.document);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              for(var i = 1; i &lt; 10; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                  var cellId = "cell-" + i.toString();</span>
+<span class="cstat-no" title="statement not covered" >                  window.document.getElementById(cellId).click();</span>
+              }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-1"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-2"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-3"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-4"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-5"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-6"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-7"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-8"));</span>
+<span class="cstat-no" title="statement not covered" >              expect(clickedValues.includes("cell-9"));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              window.close();</span>
+          });
+      });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    describe('onCellClick', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        it('gets the id of the item clicked, and calls getJsonResponse', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var jsdom = require('jsdom/lib/old-api.js');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            jsdom.env(htmlFileContent, <span class="fstat-no" title="function not covered" >function(err, window) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var tictactoe = new TicTacToe(window.document);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var valueReturned;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                tictactoe.getJsonResponse = <span class="fstat-no" title="function not covered" >function(move) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    expect(move).to.equal("1");</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                tictactoe.initializeClickListeners(window.document);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                window.document.getElementById("cell-1").click();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                window.close();</span>
+            });
+        });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    describe('generateJSON', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var board = "1,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >        var move = "1";</span>
+<span class="cstat-no" title="statement not covered" >        var sut = new TicTacToe(board);</span>
+<span class="cstat-no" title="statement not covered" >        var jsonResponse = sut.generateJSON(move);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        it('generates a JSON for the request with a board value', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            expect(jsonResponse.board).to.equal(board);</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        it('generates a JSON for the request with a move value', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            expect(jsonResponse.move).to.equal("1");</span>
+        });
+    });
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 18 2017 09:46:37 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

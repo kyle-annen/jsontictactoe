@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for assets/tictactoe.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">assets/</a> tictactoe.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.56% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+<span class="fstat-no" title="function not covered" >function TicTacToe(documentObject) {</span>
+<span class="cstat-no" title="statement not covered" >    this.boardState = "1,2,3,4,5,6,7,8,9";</span>
+<span class="cstat-no" title="statement not covered" >    this.documentObject = documentObject;</span>
+}
+&nbsp;
+TicTacToe.prototype.parseResponse = <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >    return JSON.parse(data);</span>
+};
+&nbsp;
+TicTacToe.prototype.updateBoardState = <span class="fstat-no" title="function not covered" >function(board) {</span>
+<span class="cstat-no" title="statement not covered" >    this.boardState = board;</span>
+};
+&nbsp;
+TicTacToe.prototype.renderGame = <span class="fstat-no" title="function not covered" >function(responseJson)  {</span>
+<span class="cstat-no" title="statement not covered" >    this.updateBoardState(responseJson.board);</span>
+<span class="cstat-no" title="statement not covered" >    var boardArray = responseJson.board.split(",");</span>
+<span class="cstat-no" title="statement not covered" >    this.renderBoard(boardArray);</span>
+<span class="cstat-no" title="statement not covered" >    this.renderMessages(responseJson.messages);</span>
+};
+&nbsp;
+TicTacToe.prototype.renderMessages = <span class="fstat-no" title="function not covered" >function(messages) {</span>
+<span class="cstat-no" title="statement not covered" >    if (messages.includes("Game Over")) { <span class="cstat-no" title="statement not covered" >messages.push("&lt;a href='/'&gt;Restart Game&lt;/a&gt;")}</span></span>
+<span class="cstat-no" title="statement not covered" >    var messagesReference = this.documentObject.getElementById("messages");</span>
+<span class="cstat-no" title="statement not covered" >    messagesReference.innerHTML = messages.join("&lt;br/&gt;");</span>
+};
+&nbsp;
+&nbsp;
+TicTacToe.prototype.renderBoard = <span class="fstat-no" title="function not covered" >function(board) {</span>
+<span class="cstat-no" title="statement not covered" >    for (var j = 0; j &lt; board.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >        var cellIdName = "cell-" + (j + 1).toString();</span>
+<span class="cstat-no" title="statement not covered" >        var cellRef = this.documentObject.getElementById(cellIdName);</span>
+<span class="cstat-no" title="statement not covered" >        cellRef.innerHTML = board[j];</span>
+    }
+};
+&nbsp;
+TicTacToe.prototype.generateJSON = <span class="fstat-no" title="function not covered" >function(move) {</span>
+<span class="cstat-no" title="statement not covered" >    var json = {};</span>
+<span class="cstat-no" title="statement not covered" >    json.board = this.boardState;</span>
+<span class="cstat-no" title="statement not covered" >    json.move = move;</span>
+<span class="cstat-no" title="statement not covered" >    return json;</span>
+};
+&nbsp;
+TicTacToe.prototype.getJsonResponse = <span class="fstat-no" title="function not covered" >function(move) {</span>
+<span class="cstat-no" title="statement not covered" >    var url = "https://protected-anchorage-62016.herokuapp.com/";</span>
+<span class="cstat-no" title="statement not covered" >    var requestJson = this.generateJSON(move);</span>
+<span class="cstat-no" title="statement not covered" >    var requestJsonString = JSON.stringify(requestJson);</span>
+<span class="cstat-no" title="statement not covered" >    var xmlRequest = new XMLHttpRequest();</span>
+<span class="cstat-no" title="statement not covered" >    xmlRequest.open("POST", url, true);</span>
+<span class="cstat-no" title="statement not covered" >    xmlRequest.setRequestHeader('Content-type','text/plain');</span>
+<span class="cstat-no" title="statement not covered" >    xmlRequest.onload = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        var response = xmlRequest.responseText;</span>
+<span class="cstat-no" title="statement not covered" >        var responseJson = JSON.parse(response);</span>
+<span class="cstat-no" title="statement not covered" >        if (xmlRequest.readyState === 4 &amp;&amp; xmlRequest.status === 200) {</span>
+<span class="cstat-no" title="statement not covered" >            tictactoe.renderGame(responseJson);</span>
+        }
+    };
+<span class="cstat-no" title="statement not covered" >    xmlRequest.send(requestJsonString);</span>
+};
+&nbsp;
+TicTacToe.prototype.onCellClick = <span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >    var clickedId = e.target.id;</span>
+<span class="cstat-no" title="statement not covered" >    var move = clickedId[clickedId.length - 1];</span>
+<span class="cstat-no" title="statement not covered" >    this.getJsonResponse(move);</span>
+};
+&nbsp;
+TicTacToe.prototype.initializeClickListeners = <span class="fstat-no" title="function not covered" >function(documentObject) {</span>
+<span class="cstat-no" title="statement not covered" >    documentObject.addEventListener("DOMContentLoaded", <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        var cells = documentObject.getElementsByClassName("cell");</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; cells.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            var cell = cells[i];</span>
+<span class="cstat-no" title="statement not covered" >            cell.addEventListener('click', <span class="fstat-no" title="function not covered" >function (e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                tictactoe.onCellClick(e);</span>
+            });
+        }
+<span class="cstat-no" title="statement not covered" >        tictactoe.getJsonResponse("");</span>
+    });
+};
+&nbsp;
+//sets the exports based on environment
+<span class="missing-if-branch" title="else path not taken" >E</span>if( typeof exports !== 'undefined' ) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if( typeof module !== 'undefined' &amp;&amp; module.exports ) {
+        exports = module.exports = TicTacToe;
+    }
+    exports.TicTacToe = TicTacToe;
+}
+else {
+<span class="cstat-no" title="statement not covered" >    root.TicTacToe = TicTacToe;</span>
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 18 2017 09:46:37 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
