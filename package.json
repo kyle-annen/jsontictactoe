@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/mocha --timeout=3000"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,14 @@
   },
   "homepage": "https://github.com/kyle-annen/jsontictactoe#readme",
   "dependencies": {
-    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
     "jsdom": "^11.3.0",
     "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1"
   }
 }

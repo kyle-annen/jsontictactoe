@@ -42,4 +42,17 @@ class ScalaIntegratorJSONSpec extends FunSpec{
 
     }
   }
+
+  describe("submitRound") {
+    it("parses JSON and returns updated game in JSON") {
+      val testJsonString: String = "{\"board\":\"1,2,3,4,5,6,7,8,9\",\"move\":\"1\"}"
+      val result = IntegratorJSON.submitRound(testJsonString)
+
+      assert(result.contains("board"))
+      assert(result.contains("X"))
+      assert(result.contains("O"))
+      assert(result.contains("messages"))
+
+    }
+  }
 }
